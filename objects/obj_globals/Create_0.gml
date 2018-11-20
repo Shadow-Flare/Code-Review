@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+///What's the purpose of this object?
+///When these get used, shouldn't the asteroid parent hold these values?
 minAstSpeed = [];
 maxAstSpeed = [];
 minAstSpeed[0] = 2;
