@@ -1,0 +1,15 @@
+THOUGHTS:
+	-	The asteroids have a good parent hierarchy, but we can go further.  We reall want to make use
+		of polymorphism!
+		-	For example, both the player and the asteroids wrap around the screen and move using the same speed variables.
+			Perhaps they should share a single entity parent?
+			
+	- Player state machine may need to be changed down the road, depends on the plans
+		-Invuln would be changed to a state instead of a flag if we add more states like being stunned or a dead state
+		
+		
+	- Good use of future planning by creating scr_save now.
+
+CHANGELOG:
+	- I have removed the par_asteroid instance from the room.  Abstract parent objects should never be instantiated.
+	- Replaced asteroid rotation code to use angle_difference
