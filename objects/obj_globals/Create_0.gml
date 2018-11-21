@@ -1,9 +1,7 @@
-/// @description Insert description here
+/// @description Initialize globals
 // You can write your code in this editor
-minAstSpeed = [];
-maxAstSpeed = [];
-minAstSpeed[0] = 2;
-maxAstSpeed[0] = 8;
-
-minAstSpeed[1] = 1;
-maxAstSpeed[1] = 6;
+global.view_x = 0;
+global.view_y = 0;
+var cam = view_camera[0];
+global.view_height = camera_get_view_height(cam);
+global.view_width = camera_get_view_width(cam);
