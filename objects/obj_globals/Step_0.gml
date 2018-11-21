@@ -1,0 +1,1 @@
+update_camera_variables(view_camera[0]);
