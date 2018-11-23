@@ -1,6 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-if (instance_number(par_asteroid) <= 0) {
+/// @description Level code
+if (!instance_exists(par_asteroid)) {
 	level++;
 	room_restart();
 }

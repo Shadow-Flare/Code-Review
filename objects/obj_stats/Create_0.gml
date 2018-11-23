@@ -1,11 +1,11 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Init stats
 max_spd = 8;
 turn_speed = 0.3;
 acc = 0.1;
 turn_amount = 8;
+player_max_hp = 100;
 
-damage = 10;
+damage = 100;
 bullet_speed = 16;
 bullet_range = 1000;
 fire_speed = 15;
