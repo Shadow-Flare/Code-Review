@@ -2,7 +2,10 @@
     "option_gameguid": "0b54e77a-1b3e-46fc-83b7-7c2e7f840a7f",
     "option_game_speed": 60
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
-    "targets": 461609314234257646
+    "targets": 461609314234257646,
+    "autocrop": false,
+    "mipsToGenerate": -1,
+    "border": 8
 }←7b2c4976-1e09-44e5-8256-c527145e03bb|{
     "targets": 461609314234257646
 }

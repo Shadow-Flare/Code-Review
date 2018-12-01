@@ -11,7 +11,7 @@ with (obj_stats) {
 				keys[? i] = 2;
 			} else if (keyboard_check_released(key)) {
 				keys[? i] = 3;
-			} else if (keyboard_check_direct(key)) {
+			} else if (keyboard_check(key)) {
 				keys[? i] = 1;	
 			}
 		}

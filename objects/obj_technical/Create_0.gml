@@ -34,3 +34,7 @@ for (var i = 0; i < star_layer_num; i++) {
 }
 y_offset = 200;
 y_offset_per_layer = -12;
+targ_w = 512;
+targ_h = 384;
+view_w = 0;
+view_h = 0;
