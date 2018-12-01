@@ -1,5 +1,5 @@
 # Code-Review
-New Additions:
-  Enemies,
-  Smoother turning,
-  Healthbar
+Version Additions:
+  - Boss
+  -Particle Effects
+  -Misc. Tweaking

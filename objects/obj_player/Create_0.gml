@@ -13,7 +13,7 @@ enum PLAYER_STATES {
 
 turn_speed = 0;
 bar_time = room_speed;
-alpha = 1;
+alpha = 0;
 
 enum PLAYER_SUBSTATES {
 	DEFAULT	
@@ -26,3 +26,5 @@ was_hp = hp;
 max_hp = hp;
 bar_hp_was = 0;
 bar_time2 = 30;
+timer[0] = -1;
+timer[1] = -1;

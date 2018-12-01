@@ -9,17 +9,20 @@ enum ENEMY_SUBSTATES {
 }
 
 enum MOVEMENT_STYLES {
-	ZIGZAG	
+	ZIGZAG,
+	TOCENTER
 }
 
 enum ENEMY_ATTACK_STYLES {
-	DEFAULT	
+	DEFAULT,
+	RADIAL
 }
 state = ENEMY_STATES.MOVE;
 substate = ENEMY_SUBSTATES.DEFAULT;
 bullet_speed = 12;
 rof = 30;
 hp = 1;
+size = 1;
 damage = 10;
 can_fire = true;
 dir = irandom(36)*10;

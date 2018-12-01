@@ -1,4 +1,5 @@
 /// @description Destroy Logic
+event_inherited();
 repeat (irandom_range(2, 4)) {
 	do {
 		var _x = x+irandom_range(-64, 64),

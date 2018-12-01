@@ -5,16 +5,19 @@
 var style = argument[0];
 var sub = argument[1];
 var attack_style = argument[2];
+var spd = 0;
 switch (sub) {
 	#region default
 	case ENEMY_SUBSTATES.DEFAULT:
-		
+	
 		switch (style) {
+			#region Zig Zag
 			case MOVEMENT_STYLES.ZIGZAG:
 				if (alarm[0] <= 0) {
 					alarm[0] = irandom_range(min_time, max_time);
 					dir = random(360);
 				}
+				spd = max_spd;
 				x += lengthdir_x(max_spd, dir);
 				y += lengthdir_y(max_spd, dir);
 				if (can_fire && in_view()) {
@@ -30,6 +33,21 @@ switch (sub) {
 					
 				}
 			break;
+			#endregion
+			
+			#region To Center
+			case MOVEMENT_STYLES.TOCENTER:
+				spd = min(max_spd, distance_to_point(room_width/2, room_height/2));
+				dir = point_direction(x, y, room_width/2, room_height/2);
+				if (can_fire) {
+					substate = ENEMY_SUBSTATES.ATTACK;
+				} else {
+					if (alarm[1] == -1) {
+						alarm[1] = rof;
+					}
+				}
+			break;
+			#endregion
 		}
 	break;
 	#endregion
@@ -82,12 +100,39 @@ switch (sub) {
 						can_fire = false;
 					}
 					if (floor(image_index) == image_number-1) {
-						substate = enemy_substates.DEFAULT;
+						substate = ENEMY_SUBSTATES.DEFAULT;
 					}
 				}
+			break;
+			#endregion
+			
+			#region Boss 1 Attack Style A
+			case ENEMY_ATTACK_STYLES.RADIAL:
+			if (attack_sprite == noone) {
+				enemy_attack_radial();
+			} else {
+				if (sprite_index != attack_sprite) {
+					was_sprite = sprite_index;
+					sprite_index = attack_sprite;
+					image_index = 0;
+					was_image_speed = image_speed;
+					image_speed = attack_image_speed
+				}
+				if (floor(image_index) == attack_frame && can_fire) {
+					enemy_attack_radial();
+				}
+				
+				if (floor(image_index) == image_number-1) {
+					substate = ENEMY_SUBSTATES.DEFAULT;
+					sprite_index = was_sprite;
+					image_speed = was_image_speed;
+				}
+			}
 			break;
 			#endregion
 		}
 	break;
 	#endregion
 }
+x += lengthdir_x(spd, dir);
+y += lengthdir_y(spd, dir);
