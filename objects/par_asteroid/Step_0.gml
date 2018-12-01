@@ -7,7 +7,7 @@ if (abs(dir-image_angle) > 0.1) {
 } else {
 	image_angle = dir;
 }
-room_wrap();
+
 
 var inst = instance_place(x, y, par_asteroid);
 if (inst != noone) {
@@ -28,10 +28,5 @@ if (inst != noone) {
 		}
 	}	
 }
-var inst = instance_place(x, y, obj_bullet);
-if (inst != noone) {
-	instance_destroy();
-	with (inst) {
-		instance_destroy();
-	}	
-}
+
+room_wrap();

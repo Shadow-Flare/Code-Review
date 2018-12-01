@@ -1,6 +1,7 @@
-/// @description Insert description here
-// You can write your code in this editor
-if (instance_number(par_asteroid) <= 0) {
-	level++;
-	room_restart();
+/// @description Level code
+if (global.enemies) {
+	if (!instance_exists(par_asteroid)) {
+		level++;
+		room_restart();
+	}
 }

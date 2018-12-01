@@ -1,0 +1,7 @@
+Added:
+	- Boss #1
+	- Particle Effects
+	- More parenting (par_moving)
+
+Tweaked:
+	- Clean up from v1.2
